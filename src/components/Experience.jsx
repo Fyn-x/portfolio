@@ -39,7 +39,9 @@ const About = () => {
             <span className="text-sm">({item.period})</span>
             <ul className="list-disc list-inside">
               {item.task.map((i, index) => (
-                <li key={index}>{i}</li>
+                <span key={index}>
+                  <li>{i}</li>
+                </span>
               ))}
             </ul>
           </li>
