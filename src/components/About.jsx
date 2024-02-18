@@ -33,9 +33,10 @@ const About = () => {
             className="drop-shadow-lg"
             src="/img/hero.png"
             width={500}
-            height={0}
+            height={500}
             draggable="false"
-          ></Image>
+            alt="That's me"
+          />
         </div>
       </div>
     </Container>
