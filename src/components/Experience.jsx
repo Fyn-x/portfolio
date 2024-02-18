@@ -1,6 +1,6 @@
 import Container from "./Container";
 
-const About = () => {
+const Experience = () => {
   const exp = [
     {
       id: 1,
@@ -49,4 +49,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Experience;
