@@ -3,6 +3,7 @@ import Container from "./Container";
 const About = () => {
   const exp = [
     {
+      id: 1,
       company: "PT. Dutagraha Afiah",
       role: "Web Developer",
       period: "Jan 2023 - Dec 2023",
@@ -13,6 +14,7 @@ const About = () => {
       ],
     },
     {
+      id: 2,
       company: "UD. Sumber Makmur Gas Cilegon",
       role: "Intern Web Developer",
       period: "Mar 2022 - Jun 2022",
@@ -28,7 +30,7 @@ const About = () => {
       <hr className="bg-quaternary mb-4 w-24 h-1" />
       <ul className="list-decimal ps-6">
         {exp.map((item) => (
-          <li className="text-quaternary mb-4">
+          <li key={item.id} className="text-quaternary mb-4">
             <span className="font-bold">
               {item.company}{" "}
               <span className="text-tertiary">({item.role})</span>
@@ -36,8 +38,8 @@ const About = () => {
             <br />
             <span className="text-sm">({item.period})</span>
             <ul className="list-disc list-inside">
-              {item.task.map((i) => (
-                <li>{i}</li>
+              {item.task.map((i, index) => (
+                <li key={index}>{i}</li>
               ))}
             </ul>
           </li>
