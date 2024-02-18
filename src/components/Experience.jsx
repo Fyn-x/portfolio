@@ -37,13 +37,11 @@ const About = () => {
             </span>
             <br />
             <span className="text-sm">({item.period})</span>
-            <ul className="list-disc list-inside">
-              {item.task.map((i, index) => (
-                <span key={index}>
-                  <li>{i}</li>
-                </span>
-              ))}
-            </ul>
+            {item.task.map((i, index) => (
+              <ul key={index} className="list-disc list-inside">
+                <li>{i}</li>
+              </ul>
+            ))}
           </li>
         ))}
       </ul>
