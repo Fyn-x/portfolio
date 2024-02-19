@@ -39,7 +39,7 @@ const Project = () => {
     <Container id="projects">
       <h1 className="text-3xl text-tertiary">Projects</h1>
       <hr className="bg-quaternary mb-4 w-24 h-1" />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-8">
         {projects.map((project) => (
           <div
             key={project.id}

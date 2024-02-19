@@ -4,9 +4,8 @@ import Container from "./Container";
 const About = () => {
   return (
     <Container id={"about"}>
-      {" "}
-      <div className="grid grid-cols-3 gap-3 h-[85vh]">
-        <div className="my-auto col-span-2">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
+        <div className="my-auto md:col-span-2 md:order-first order-2">
           <h1 className="text-md text-4xl tracking-wider font-bold text-quaternary">
             Hi ✋, i am
             <br />
@@ -28,7 +27,7 @@ const About = () => {
             latest technology and learn quickly.
           </p>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end md:order-last order-1">
           <Image
             className="drop-shadow-lg"
             src="/img/hero.png"
