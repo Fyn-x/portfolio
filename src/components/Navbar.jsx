@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`h-16 fixed z-10 ${
+        className={`h-16 fixed z-50 ${
           open ? "" : "border-b-[1px] border-secondary"
         } flex items-center justify-between bg-primary w-full px-4 md:px-24`}
       >
@@ -85,7 +85,7 @@ const Navbar = () => {
         </ul>
       </nav>
       <div
-        className={`transition-all duration-1000 md:hidden fixed ${
+        className={`transition-all duration-1000 md:hidden fixed z-40 ${
           open
             ? "translate-y-16 animate-nav-open"
             : "-translate-y-16 animate-nav-close"
