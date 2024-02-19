@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "./Container";
 
 const Project = () => {
@@ -25,6 +26,14 @@ const Project = () => {
       lang: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       tech: ["JQuery", "Bootstrap"],
     },
+    {
+      id: 3,
+      name: "Portfolio",
+      image: "/img/prev-portfolio.png",
+      preview: "https://fynx.vercel.app",
+      lang: ["HTML", "CSS", "JavaScript"],
+      tech: ["Tailwind", "ReactJS", "NextJS", "DaisyUI"],
+    },
   ];
   return (
     <Container id="projects">
@@ -32,10 +41,13 @@ const Project = () => {
       <hr className="bg-quaternary mb-4 w-24 h-1" />
       <div className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
-          <div key={project.id} className="card outline-quaternary outline outline-2 shadow-xl">
+          <div
+            key={project.id}
+            className="card outline-quaternary outline outline-2 shadow-xl"
+          >
             {project.image && (
               <figure className="max-h-40">
-                <img src={project.image} alt={project.name} />
+                <img src={project.image} loading="lazy" alt={project.name} />
               </figure>
             )}
             <div className="card-body rounded-lg text-quaternary gap-4">
