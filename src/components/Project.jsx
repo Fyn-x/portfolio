@@ -3,6 +3,7 @@ import Container from "./Container";
 const Project = () => {
   const projects = [
     {
+      id: 1,
       name: "Company Profile",
       image: "/img/prev-rsummi.png",
       preview: "https://rsummi.co.id",
@@ -17,6 +18,7 @@ const Project = () => {
       ],
     },
     {
+      id: 2,
       name: "Sistem Jaminan Mutu (Sijamu)",
       image: "/img/prev-sijamu.png",
       preview: null,
@@ -30,7 +32,7 @@ const Project = () => {
       <hr className="bg-quaternary mb-4 w-24 h-1" />
       <div className="grid grid-cols-3 gap-4">
         {projects.map((project) => (
-          <div className="card outline-quaternary outline outline-2 shadow-xl">
+          <div key={project.id} className="card outline-quaternary outline outline-2 shadow-xl">
             {project.image && (
               <figure className="max-h-40">
                 <img src={project.image} alt={project.name} />
