@@ -4,7 +4,7 @@ import Container from "./Container";
 const About = () => {
   return (
     <Container id={"about"}>
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-3 -z-10">
         <div className="my-auto md:col-span-2 md:order-first order-2">
           <h1 className="text-md text-4xl tracking-wider font-bold text-quaternary">
             Hi ✋, i am

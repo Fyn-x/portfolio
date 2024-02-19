@@ -35,9 +35,12 @@ const Navbar = () => {
           open ? "" : "border-b-[1px] border-secondary"
         } flex items-center justify-between bg-primary w-full px-4 md:px-24`}
       >
-        <Image width={100} height={0} alt="..." src="/img/fynx-logo.png"></Image>
-        <button onClick={updateOpenState} className="md:hidden flex hover:opacity-75">
-          {open == false ? (
+        <Image width={100} height={0} alt="..." src="/img/fynx-logo.png" />
+        <button
+          onClick={updateOpenState}
+          className="md:hidden flex hover:opacity-75"
+        >
+          {!open ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -83,14 +86,20 @@ const Navbar = () => {
       </nav>
       <div
         className={`transition-all duration-1000 md:hidden fixed ${
-          open ? "translate-y-16 animate-nav-open" : "-translate-y-16 animate-nav-close"
+          open
+            ? "translate-y-16 animate-nav-open"
+            : "-translate-y-16 animate-nav-close"
         } w-full bg-primary border-b-[1px] border-secondary px-4 md:px-24 py-4`}
       >
         <div
           className={`flex flex-col items-start gap-3 h-full text-quaternary`}
         >
           {menus.map((menu) => (
-            <Link key={menu.id} className="hover:text-tertiary" href={menu.link}>
+            <Link
+              key={menu.id}
+              className="hover:text-tertiary"
+              href={menu.link}
+            >
               <span className="text-tertiary">#</span> {menu.name}
             </Link>
           ))}
