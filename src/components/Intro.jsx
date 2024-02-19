@@ -4,7 +4,7 @@ import Container from "./Container";
 const Intro = () => {
   return (
     <Container id={"intro"}>
-      <div className="grid grid-cols-1 gap-4 h-[85vh] -z-10">
+      <div className="grid grid-cols-1 gap-4 h-[85vh] -z-10 md:z-0">
         <div className="flex flex-col items-center justify-center">
           <h1 className="text-7xl text-center tracking-wider font-bold uppercase text-quaternary">
             Did you know
